@@ -67,9 +67,16 @@
             #endregion
 
             #region Q09
-            double price;
-            if(TryGetPrice("Clean Code", out price))
-                Console.WriteLine(price);
+            //double price;
+            //if(TryGetPrice("Clean Code", out price))
+            //    Console.WriteLine(price);
+            #endregion
+
+            #region Q10
+
+            PrintBookInfo("C#");
+            PrintBookInfo("C#", 400);
+
             #endregion
         }
 
@@ -115,6 +122,11 @@
                 price = 0;
                 return false;
             }
+        }
+
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"title : {title}\npages : {pages}");
         }
     }
 }
