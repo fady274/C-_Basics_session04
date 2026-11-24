@@ -20,7 +20,13 @@
 
             #region Q03
 
-            PrintWelcomeMessage();
+            //PrintWelcomeMessage();
+
+            #endregion
+
+            #region Q04
+
+            PrintBookTitle("Route");
 
             #endregion
         }
@@ -29,5 +35,12 @@
         {
             Console.WriteLine("Welcome to the Library!");
         }
+
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Book title : {title}");
+        }
+
+
     }
 }
