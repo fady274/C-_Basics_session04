@@ -50,11 +50,19 @@
             #endregion
 
             #region Q07
-            int pages = 400;
-            Console.WriteLine($"pages before : {pages}");
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine($"pages after : {pages}");
-            // the value has been changed because we passed it by reference 
+            //int pages = 400;
+            //Console.WriteLine($"pages before : {pages}");
+            //AddBonusPagesByRef(ref pages);
+            //Console.WriteLine($"pages after : {pages}");
+            //// the value has been changed because we passed it by reference 
+
+            #endregion
+
+            #region Q08 
+            double[] prices = { 25.5, 40.0 };
+            Console.WriteLine($"length of prices (before) : {prices.Length}");
+            ReplaceArray(ref prices);
+            Console.WriteLine($"length of prices (after) : {prices.Length}");
 
             #endregion
         }
@@ -82,6 +90,11 @@
         static void AddBonusPagesByRef(ref int pages)
         {
             pages += 50;
+        }
+
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
     }
 }
