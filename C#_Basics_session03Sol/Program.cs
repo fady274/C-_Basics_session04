@@ -31,12 +31,21 @@
             #endregion
 
             #region Q05
-            int pages = 400;
-            Console.WriteLine($"pages before : {pages}");
-            AddBonusPages(pages);
-            Console.WriteLine($"pages after : {pages}");
-            // No change because we passed it by value 
+            //int pages = 400;
+            //Console.WriteLine($"pages before : {pages}");
+            //AddBonusPages(pages);
+            //Console.WriteLine($"pages after : {pages}");
+            //// No change because we passed it by value 
 
+
+            #endregion
+
+            #region Q06
+            double[] prices = { 25.5, 40.0 };
+            Console.WriteLine($"Prices before : {prices[0]}");
+            ApplyDiscount(prices);
+            Console.WriteLine($"Prices after : {prices[0]}");
+            // the effect has been done , because the array is a reference type 
 
             #endregion
         }
@@ -54,6 +63,11 @@
         static void AddBonusPages(int pages)
         {
             pages += 50;
+        }
+
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
         }
     }
 }
