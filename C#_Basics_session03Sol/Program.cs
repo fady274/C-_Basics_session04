@@ -81,7 +81,13 @@
 
             #region Q11
 
-            PrintBookInfo(pages: 40, title : "C#");
+            //PrintBookInfo(pages: 40, title : "C#");
+
+            #endregion
+
+            #region Q12
+
+            PrintAllTitles("C#", "Route", "atomic Habits");
 
             #endregion
         }
@@ -133,6 +139,14 @@
         static void PrintBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"title : {title}\npages : {pages}");
+        }
+
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach(string book in titles)
+            {
+                Console.WriteLine(book);
+            }
         }
     }
 }
