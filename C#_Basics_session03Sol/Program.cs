@@ -26,7 +26,17 @@
 
             #region Q04
 
-            PrintBookTitle("Route");
+            //PrintBookTitle("Route");
+
+            #endregion
+
+            #region Q05
+            int pages = 400;
+            Console.WriteLine($"pages before : {pages}");
+            AddBonusPages(pages);
+            Console.WriteLine($"pages after : {pages}");
+            // No change because we passed it by value 
+
 
             #endregion
         }
@@ -41,6 +51,9 @@
             Console.WriteLine($"Book title : {title}");
         }
 
-
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
     }
 }
